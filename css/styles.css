@@ -1,0 +1,250 @@
+/* Custom CSS for BrandZen Website */
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Preloader */
+#preloader {
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+/* Navbar Styles */
+#navbar {
+    transition: all 0.3s ease-in-out;
+}
+
+#navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Service Card Hover Effect */
+.service-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Back to Top Button */
+#back-to-top {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Form Input Focus Styles */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.3);
+    border-color: #0ea5e9;
+}
+
+/* Custom Animations */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-out;
+}
+
+.slide-down {
+    animation: slideDown 1s ease-out;
+}
+
+.slide-left {
+    animation: slideLeft 1s ease-out;
+}
+
+.slide-right {
+    animation: slideRight 1s ease-out;
+}
+
+.zoom-in {
+    animation: zoomIn 1s ease-out;
+}
+
+/* Scroll-based animations */
+.reveal {
+    position: relative;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+.reveal.fade-bottom {
+    transform: translateY(100px);
+}
+
+.reveal.fade-bottom.active {
+    transform: translateY(0);
+}
+
+.reveal.fade-left {
+    transform: translateX(-100px);
+}
+
+.reveal.fade-left.active {
+    transform: translateX(0);
+}
+
+.reveal.fade-right {
+    transform: translateX(100px);
+}
+
+.reveal.fade-right.active {
+    transform: translateX(0);
+}
+
+/* Testimonial Card Styles */
+.testimonial-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Floating Social Buttons Animation */
+.social-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .grid {
+        gap: 1.5rem;
+    }
+}
+
+/* Dynamic Background Elements */
+.bg-element {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+    z-index: 0;
+    transition: all 15s ease-in-out;
+}
+
+.bg-element-1 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, #0ea5e9, #7dd3fc);
+    animation: moveAround1 25s infinite alternate ease-in-out, colorChange1 15s infinite alternate;
+}
+
+.bg-element-2 {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(45deg, #ffd300, #ffee99);
+    animation: moveAround2 30s infinite alternate ease-in-out, colorChange2 20s infinite alternate;
+}
+
+.bg-element-3 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, #bfa094, #e0cec7);
+    animation: moveAround3 35s infinite alternate ease-in-out, colorChange3 25s infinite alternate;
+}
+
+@keyframes moveAround1 {
+    0% { transform: translate(10%, 10%); }
+    25% { transform: translate(60%, 20%); }
+    50% { transform: translate(30%, 50%); }
+    75% { transform: translate(70%, 30%); }
+    100% { transform: translate(20%, 60%); }
+}
+
+@keyframes moveAround2 {
+    0% { transform: translate(70%, 60%); }
+    25% { transform: translate(20%, 30%); }
+    50% { transform: translate(50%, 10%); }
+    75% { transform: translate(10%, 40%); }
+    100% { transform: translate(60%, 70%); }
+}
+
+@keyframes moveAround3 {
+    0% { transform: translate(40%, 30%); }
+    25% { transform: translate(10%, 60%); }
+    50% { transform: translate(70%, 40%); }
+    75% { transform: translate(30%, 10%); }
+    100% { transform: translate(50%, 70%); }
+}
+
+@keyframes colorChange1 {
+    0% { background: linear-gradient(45deg, #0ea5e9, #7dd3fc); }
+    50% { background: linear-gradient(225deg, #0284c7, #38bdf8); }
+    100% { background: linear-gradient(135deg, #075985, #0ea5e9); }
+}
+
+@keyframes colorChange2 {
+    0% { background: linear-gradient(45deg, #ffd300, #ffee99); }
+    50% { background: linear-gradient(225deg, #cca800, #ffe566); }
+    100% { background: linear-gradient(135deg, #997e00, #ffd300); }
+}
+
+@keyframes colorChange3 {
+    0% { background: linear-gradient(45deg, #bfa094, #e0cec7); }
+    50% { background: linear-gradient(225deg, #a18072, #d2bab0); }
+    100% { background: linear-gradient(135deg, #846358, #bfa094); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0ea5e9;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0284c7;
+}
